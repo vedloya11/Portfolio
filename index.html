@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ved Loya — Machine Learning Engineer & Backend Architect</title>
+  <meta name="description" content="Portfolio of Ved Loya — Machine Learning Engineer & FastAPI Architect. Custom predictive models, SHAP explainability, and high-performance production systems built for AI.">
+  <meta name="author" content="Ved Loya">
+
+  <!-- Editorial & Grotesk Google Fonts matching Anthracite Studio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js Library for 3D ASCII Particle Cloud -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- 3D Creation of Adam ASCII Hands Layer (Anthracite Studio Masterpiece) -->
+  <div class="hero-hands-3d-stage" id="hero-hands-stage">
+    <div class="hero-hands-frame" id="hero-hands-frame">
+      <img src="assets/creation-hands.jpg" alt="Creation of Adam 3D ASCII Hands" class="hero-hands-canvas-img" id="hero-hands-img">
+      <!-- Dynamic Glowing Central Contact Spark -->
+      <div class="hands-spark-core" id="hands-spark-core">
+        <div class="spark-radial-halo"></div>
+        <div class="spark-white-center">04P682</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient 3D ASCII Canvas (Floating Dust & Matrix Shimmer) -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Right Edge Vertical Award Nominee Ribbon (Matching Anthracite Studio) -->
+  <div class="award-ribbon-nominee" title="Awwwards / Machine Learning Engineering 2026">
+    <div class="ribbon-brand">W.</div>
+    <div class="ribbon-text">Nominee</div>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING CENTER PILL NAVIGATION (Anthracite Studio Pill Bar)
+       ======================================================================== -->
+  <header id="header-nav">
+    <div class="nav-floating-pill">
+      <!-- Monogram Glyph -->
+      <a href="#hero" class="pill-logo-box" title="Ved Loya">
+        <span class="pill-logo-letter">v</span>
+      </a>
+
+      <!-- Current Section Indicator / Brand -->
+      <a href="#hero" class="pill-section-indicator" id="nav-active-section">
+        VED LOYA STUDIO
+      </a>
+
+      <!-- Hamburger / Menu Toggle -->
+      <button class="pill-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Right Side Language / Quick Action Pill -->
+    <div class="nav-right-actions">
+      <div class="lang-switch-box">
+        <span class="lang-opt active">EN</span>
+        <span class="lang-sep">|</span>
+        <span class="lang-opt">ML</span>
+      </div>
+      <button class="btn-box-outline open-resume-btn">
+        <span>RESUME</span>
+      </button>
+    </div>
+
+    <!-- Slide-down / Fullscreen Navigation Overlay -->
+    <div class="nav-drawer-menu" id="nav-drawer">
+      <div class="drawer-header">
+        <span class="drawer-title">NAVIGATION</span>
+        <button class="drawer-close-btn" id="drawer-close-btn"><i class="fas fa-xmark"></i></button>
+      </div>
+      <ul class="drawer-links-list">
+        <li><a href="#hero" class="drawer-link"><span class="drawer-idx">01</span> Overview</a></li>
+        <li><a href="#services" class="drawer-link"><span class="drawer-idx">02</span> Specializations</a></li>
+        <li><a href="#projects" class="drawer-link"><span class="drawer-idx">03</span> Selected Works</a></li>
+        <li><a href="#education" class="drawer-link"><span class="drawer-idx">04</span> Academic Record</a></li>
+        <li><a href="#leadership" class="drawer-link"><span class="drawer-idx">05</span> Leadership</a></li>
+        <li><a href="#connect" class="drawer-link"><span class="drawer-idx">06</span> Inquiries</a></li>
+      </ul>
+      <div class="drawer-footer">
+        <p>vedloya@gmail.com • +91 9209102183 • Nagpur, India</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION (Matching Screenshot 1 & 2)
+         ====================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-inner-container">
+        
+        <!-- Large Editorial Headline with Electric Blue Highlights -->
+        <h1 class="hero-editorial-title">
+          <span class="highlight-blue">Ved Loya,</span><br>
+          Machine Learning <span class="highlight-blue">and AI.</span>
+        </h1>
+
+        <!-- Subheading Paragraph -->
+        <p class="hero-subhead">
+          Machine Learning Engineer &amp; Backend Architect in Nagpur, India. I build end-to-end predictive systems, SHAP explainable models, and high-performance production FastAPI REST backends that automate complex decision tasks.
+        </p>
+
+        <!-- CTA Action Buttons Row -->
+        <div class="hero-cta-row">
+          <a href="#connect" class="btn-box-outline">
+            <span>EMAIL ME</span>
+          </a>
+          <a href="#projects" class="btn-text-link">
+            <span>SEE THE PROJECTS</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Decorative Color Swatches Matrix (Matching Screenshot 1 Bottom Right) -->
+        <div class="hero-color-palette-bar" title="Neural Tensor Palette">
+          <span class="swatch sw-brown"></span>
+          <span class="swatch sw-blue-1"></span>
+          <span class="swatch sw-blue-2"></span>
+          <span class="swatch sw-blue-3"></span>
+          <span class="swatch sw-blue-4"></span>
+          <span class="swatch sw-blue-5"></span>
+          <span class="swatch sw-blue-6"></span>
+          <span class="swatch sw-blue-7"></span>
+        </div>
+
+        <!-- Interactive 3D ASCII Cursor Hint -->
+        <div class="hero-interactive-cue">
+          <span class="cue-dot"></span>
+          <span class="cue-text">INTERACTIVE 3D ASCII RECEPTOR • DRAG OR HOVER TO ROTATE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. CORE SPECIALIZATIONS & PILLARS (Matching Screenshot 3)
+         "From design to code, all the way to AI."
+         ====================================================================== -->
+    <section id="services" class="section-editorial">
+      <div class="section-container">
+        
+        <!-- Section Header Row -->
+        <div class="services-header-row">
+          <h2 class="services-large-headline">
+            From raw data to code,<br>
+            <span class="highlight-blue">all the way to AI.</span>
+          </h2>
+          <div class="services-header-right">
+            <a href="#projects" class="btn-box-outline">
+              <span>ALL SERVICES</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4-Column Specializations Grid (Matching User Reference) -->
+        <div class="services-4col-grid">
+          
+          <!-- Column 1: Machine learning -->
+          <div class="service-col-item">
+            <div class="service-pixel-icon">
+              <!-- Pixel Block 1 -->
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#0029ff">
+                <path d="M0 0h24v12H12v12H0V0z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Machine learning</h3>
+            <p class="service-desc">
+              Models that rank risk or predict prices, tuned with cross-validation.
+            </p>
+            <div class="service-tag-list">
+              <div class="service-tag-row">
+                <span class="tag-name">XGBOOST, LIGHTGBM</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">SCIKIT-LEARN</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">SHAP EXPLANATIONS</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Backend APIs -->
+          <div class="service-col-item">
+            <div class="service-pixel-icon">
+              <!-- Pixel Block 2 (Top-Right Corner) -->
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#0029ff">
+                <path d="M0 0h24v24h-8V8H0V0z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Backend APIs</h3>
+            <p class="service-desc">
+              Typed, documented endpoints that serve predictions and save results.
+            </p>
+            <div class="service-tag-list">
+              <div class="service-tag-row">
+                <span class="tag-name">FASTAPI</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">PYDANTIC SCHEMAS</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">SQLALCHEMY</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Data work -->
+          <div class="service-col-item">
+            <div class="service-pixel-icon">
+              <!-- Pixel Block 3 (Bottom-Left L) -->
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#0029ff">
+                <path d="M0 0h12v12h12v12H0V0z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Data work</h3>
+            <p class="service-desc">
+              Cleaning messy columns and building features the model can use.
+            </p>
+            <div class="service-tag-list">
+              <div class="service-tag-row">
+                <span class="tag-name">PANDAS, NUMPY</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">FEATURE ENGINEERING</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">MATPLOTLIB, SEABORN</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 4: Tools and databases -->
+          <div class="service-col-item">
+            <div class="service-pixel-icon">
+              <!-- Pixel Block 4 (Stepped Block) -->
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#0029ff">
+                <path d="M12 0h12v24H0v-12h12V0z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Tools and databases</h3>
+            <p class="service-desc">
+              The everyday kit for shipping and testing code with a team.
+            </p>
+            <div class="service-tag-list">
+              <div class="service-tag-row">
+                <span class="tag-name">GIT AND GITHUB</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">POSTGRESQL, MYSQL, ORACLE</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+              <div class="service-tag-row">
+                <span class="tag-name">PYTEST, JUPYTER</span>
+                <span class="tag-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SELECTED PROJECTS (Matching Screenshot 4 Layout)
+         ====================================================================== -->
+    <section id="projects" class="section-editorial">
+      <div class="section-container">
+        
+        <!-- Project Section Header with Grid / List Toggle Switch -->
+        <div class="projects-section-header">
+          <div>
+            <span class="section-eyebrow">PORTFOLIO</span>
+            <h2 class="section-serif-title">Featured Projects</h2>
+          </div>
+          
+          <!-- Electric Blue [ GRID | LIST ] Toggle Switch (Matching Screenshot 4) -->
+          <div class="view-toggle-bar">
+            <button class="view-toggle-btn active" id="btn-view-grid" title="Grid View">
+              <i class="fas fa-grip"></i>
+              <span>GRID</span>
+            </button>
+            <button class="view-toggle-btn" id="btn-view-list" title="List View">
+              <i class="fas fa-list"></i>
+              <span>LIST</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Container (Grid View by default) -->
+        <div class="projects-display-wrapper view-mode-grid" id="projects-wrapper">
+          
+          <!-- Project Card 1: Software Defect Risk Engine -->
+          <div class="project-showcase-item">
+            <div class="project-info-side">
+              <div class="project-meta-pills">
+                <span class="project-tag-pill">MACHINE LEARNING</span>
+                <span class="project-tag-pill">NASA KC1 BENCHMARK</span>
+                <span class="project-tag-pill">0.82 ROC-AUC</span>
+              </div>
+              <h3 class="project-item-title">Software Defect Risk Engine</h3>
+              <p class="project-item-desc">
+                An end-to-end Machine Learning system and static analysis pipeline that evaluates Python source modules to predict defect-risk probability (Low / Medium / High) and reports key risk-driving factors using SHAP explainability, backed by a production FastAPI REST backend.
+              </p>
+              
+              <ul class="project-bullets">
+                <li>Trained on the NASA KC1 benchmark (2,109 modules, ~15% defective) to score code defect probability.</li>
+                <li>Engineered operand/operator density metrics and tuned XGBoost using 5-fold stratified RandomizedSearchCV with class-imbalance weighting (<code>scale_pos_weight</code>).</li>
+                <li>Achieved 0.82 ROC-AUC and 84% recall on held-out test set (317 samples), prioritizing recall for code review.</li>
+                <li>Integrated SHAP explainability to display which structural metrics (cyclomatic complexity, branch count) raise or lower risk scores.</li>
+                <li>Extracted LOC, cyclomatic complexity, and Halstead metrics using Python's <code>ast</code> module and <code>Radon</code>.</li>
+                <li>Deployed a FastAPI backend with Pydantic validation, endpoints for code analysis, and SQLAlchemy ORM scan-history CRUD.</li>
+              </ul>
+
+              <div class="project-actions-group">
+                <a href="https://github.com/vedloya11" target="_blank" class="btn-project-electric">
+                  <span>VIEW GITHUB REPO</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/vedloya11" target="_blank" class="btn-box-outline">
+                  <span>LIVE HOSTED APP</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Visual Card -->
+            <div class="project-visual-side">
+              <div class="visual-card-frame">
+                <div class="visual-card-overlay">
+                  <span class="visual-badge">01 // XGBOOST + SHAP</span>
+                  <h4>Software Defect Risk Engine</h4>
+                  <div class="visual-stats-row">
+                    <div class="v-stat"><span>ROC-AUC</span><strong>0.82</strong></div>
+                    <div class="v-stat"><span>RECALL</span><strong>84%</strong></div>
+                    <div class="v-stat"><span>SAMPLES</span><strong>2,109</strong></div>
+                  </div>
+                </div>
+                <div class="visual-decor-matrix">
+                  <code>NASA_KC1 // ROC_AUC: 0.82 // RECALL: 84% // RADON_AST // FASTAPI_SERVER</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2: Used Car Price Predictor with Recommender -->
+          <div class="project-showcase-item">
+            <div class="project-info-side">
+              <div class="project-meta-pills">
+                <span class="project-tag-pill">REGRESSION &amp; KNN</span>
+                <span class="project-tag-pill">2,059 LISTINGS</span>
+                <span class="project-tag-pill">R² = 0.89</span>
+              </div>
+              <h3 class="project-item-title">Used Car Price Predictor with Recommender</h3>
+              <p class="project-item-desc">
+                A production ML pricing service trained on 2,059 Indian used-car listings that accurately predicts fair market valuations using an XGBoost regressor (R² = 0.89) and surfaces comparable market listings using a K-Nearest Neighbors recommendation engine.
+              </p>
+
+              <ul class="project-bullets">
+                <li>Trained on 2,059 Indian used-car listings across 20 features to predict fair prices and recommend 5 closest comparable listings.</li>
+                <li>Cleaned data via median/mode imputation, regex numeric extraction from text fields (Engine, Max Power, Max Torque), and missing-value heatmap analysis.</li>
+                <li>Engineered features including Car Age and model-popularity frequency encoding, with one-hot encoding for 8 categorical variables.</li>
+                <li>Trained an XGBoost Regressor achieving R² of 0.89 (MAE Rs. 2.66 lakh) on an 80/20 train-test split.</li>
+                <li>Integrated a K-Nearest Neighbors (KNN) recommender over price and feature distributions to surface top comparable listings.</li>
+                <li>Deployed as a FastAPI service with a <code>/predict</code> endpoint, Pydantic input validation, and serialized model artifacts loaded via joblib.</li>
+              </ul>
+
+              <div class="project-actions-group">
+                <a href="https://github.com/vedloya11" target="_blank" class="btn-project-electric">
+                  <span>VIEW GITHUB REPO</span>
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/vedloya11" target="_blank" class="btn-box-outline">
+                  <span>LIVE HOSTED APP</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Visual Card -->
+            <div class="project-visual-side">
+              <div class="visual-card-frame">
+                <div class="visual-card-overlay">
+                  <span class="visual-badge">02 // XGBOOST + KNN</span>
+                  <h4>Used Car Price Predictor</h4>
+                  <div class="visual-stats-row">
+                    <div class="v-stat"><span>R² SCORE</span><strong>0.89</strong></div>
+                    <div class="v-stat"><span>DATASET</span><strong>2,059</strong></div>
+                    <div class="v-stat"><span>KNN COMPS</span><strong>5 Nearest</strong></div>
+                  </div>
+                </div>
+                <div class="visual-decor-matrix">
+                  <code>XGB_REGRESSOR // R2: 0.89 // INDIAN_LISTINGS: 2059 // KNN_RECOMMENDER</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. ACADEMIC FOUNDATIONS & EDUCATION
+         ====================================================================== -->
+    <section id="education" class="section-editorial">
+      <div class="section-container">
+        <div class="section-header-row-simple">
+          <span class="section-eyebrow">ACADEMIC FOUNDATIONS</span>
+          <h2 class="section-serif-title">Education</h2>
+        </div>
+
+        <div class="editorial-cards-single">
+          <!-- College Degree -->
+          <div class="editorial-card-box">
+            <div class="card-eyebrow-row">
+              <span class="card-timeline-tag">2024 — 2028 | 5TH SEMESTER</span>
+              <div class="card-score-pill">
+                <i class="fas fa-award"></i>
+                <span>CGPA: <strong>7.77</strong></span>
+              </div>
+            </div>
+            <h3 class="card-main-heading">Bachelor of Engineering in Computer Engineering</h3>
+            <p class="card-sub-institution">Ramdeobaba University</p>
+            <p class="card-body-text">
+              Comprehensive technical study in Machine Learning, Algorithms, Operating Systems, Database Management Systems, and Software Architecture.
+            </p>
+            <div class="card-chips-cluster">
+              <span>Machine Learning</span><span>Data Structures</span><span>OOP in Java</span><span>DBMS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. LEADERSHIP & POSITIONS OF RESPONSIBILITY
+         ====================================================================== -->
+    <section id="leadership" class="section-editorial">
+      <div class="section-container">
+        <div class="section-header-row-simple">
+          <span class="section-eyebrow">STUDENT COMMUNITY &amp; IMPACT</span>
+          <h2 class="section-serif-title">Positions of Responsibility</h2>
+        </div>
+
+        <div class="editorial-cards-grid-2">
+          <!-- Role 1: Treasurer -->
+          <div class="editorial-card-box">
+            <div class="card-eyebrow-row">
+              <span class="card-role-label">LEADERSHIP ROLE</span>
+              <span class="card-status-dot active"></span>
+            </div>
+            <h3 class="card-main-heading">Treasurer</h3>
+            <p class="card-sub-institution">ACM RBU Student Chapter</p>
+            <p class="card-body-text">
+              Serving as Treasurer for the Association for Computing Machinery (ACM) Student Chapter at Ramdeobaba University. Managing financial planning, chapter budgets, sponsorship accounts, resource allocation, and fund logistics for technical workshops, coding events, and hackathons.
+            </p>
+            <div class="card-chips-cluster">
+              <span>Budget Management</span><span>Event Sponsorships</span><span>Hackathons</span>
+            </div>
+          </div>
+
+          <!-- Role 2: Joint Venue Manager -->
+          <div class="editorial-card-box">
+            <div class="card-eyebrow-row">
+              <span class="card-role-label">ORGANIZING COMMITTEE</span>
+              <span class="card-status-dot active"></span>
+            </div>
+            <h3 class="card-main-heading">Joint Venue Manager</h3>
+            <p class="card-sub-institution">Compusys Student Body</p>
+            <p class="card-body-text">
+              Serving as Joint Venue Manager for the Compusys departmental student body (Computer Engineering). Overseeing venue logistics, technical equipment coordination, audio-visual operations, and infrastructure planning for engineering symposiums, seminars, and student gatherings.
+            </p>
+            <div class="card-chips-cluster">
+              <span>Venue Logistics</span><span>Audio-Visual Operations</span><span>Technical Symposia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CONNECT & TRANSMISSION (Anthracite Studio Inquiries)
+         ====================================================================== -->
+    <section id="connect" class="section-editorial connect-section">
+      <div class="section-container">
+        
+        <div class="connect-split-layout">
+          <!-- Left: Direct Channels with 1-click Copy -->
+          <div class="connect-info-side">
+            <span class="section-eyebrow">INQUIRIES &amp; COLLABORATIONS</span>
+            <h2 class="connect-serif-title">
+              Let's build intelligent systems <span class="highlight-blue">together.</span>
+            </h2>
+            <p class="connect-desc">
+              Seeking opportunities in Machine Learning Engineering, production model serving, and high-performance FastAPI backend systems. Reach out directly or dispatch a transmission below.
+            </p>
+
+            <div class="connect-channels-matrix">
+              <!-- Email Card -->
+              <div class="channel-row-card">
+                <div class="channel-text-wrap">
+                  <span class="channel-lbl">DIRECT EMAIL</span>
+                  <a href="mailto:vedloya@gmail.com" class="channel-val">vedloya@gmail.com</a>
+                </div>
+                <button class="channel-action-btn copy-btn" data-copy="vedloya@gmail.com" title="Copy Email">
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="channel-row-card">
+                <div class="channel-text-wrap">
+                  <span class="channel-lbl">CELL / WHATSAPP</span>
+                  <a href="tel:+919209102183" class="channel-val">+91 9209102183</a>
+                </div>
+                <button class="channel-action-btn copy-btn" data-copy="+919209102183" title="Copy Phone">
+                  <i class="fas fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Location Card -->
+              <div class="channel-row-card">
+                <div class="channel-text-wrap">
+                  <span class="channel-lbl">LOCATION</span>
+                  <span class="channel-val">Nagpur, Maharashtra, India</span>
+                </div>
+                <span class="channel-static-glyph"><i class="fas fa-location-dot"></i></span>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="channel-row-card">
+                <div class="channel-text-wrap">
+                  <span class="channel-lbl">LINKEDIN</span>
+                  <a href="https://linkedin.com/in/vedloya" target="_blank" class="channel-val">linkedin.com/in/vedloya</a>
+                </div>
+                <a href="https://linkedin.com/in/vedloya" target="_blank" class="channel-action-btn" title="Open LinkedIn">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- GitHub -->
+              <div class="channel-row-card">
+                <div class="channel-text-wrap">
+                  <span class="channel-lbl">GITHUB</span>
+                  <a href="https://github.com/vedloya11" target="_blank" class="channel-val">github.com/vedloya11</a>
+                </div>
+                <a href="https://github.com/vedloya11" target="_blank" class="channel-action-btn" title="Open GitHub">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Direct Message Dispatch Form -->
+          <div class="connect-form-side">
+            <div class="connect-form-box">
+              <h3 class="form-title">Send a Transmission</h3>
+              <p class="form-lead">Enter your details and inquiry. Messages are delivered directly to Ved Loya.</p>
+              
+              <form id="contact-form">
+                <div class="input-field-group">
+                  <label for="contact-name">YOUR NAME</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Henderson" required>
+                </div>
+
+                <div class="input-field-group">
+                  <label for="contact-email">YOUR EMAIL ADDRESS</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.ai" required>
+                </div>
+
+                <div class="input-field-group">
+                  <label for="contact-message">MESSAGE</label>
+                  <textarea id="contact-message" class="form-input form-textarea" placeholder="Discuss ML engineering roles, model architectures, or collaborations..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-form-submit">
+                  <span>SEND TRANSMISSION</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-left-brand">
+        <span class="footer-logo">v</span>
+        <span class="footer-name">VED LOYA</span>
+        <span class="footer-divider">•</span>
+        <span class="footer-tagline">Machine Learning Engineer</span>
+      </div>
+      <p class="footer-copyright">
+        © 2026 Ved Loya • B.E. Computer Engineering, Ramdeobaba University • Nagpur, India
+      </p>
+      <div class="footer-nav-links">
+        <a href="https://github.com/vedloya11" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/vedloya" target="_blank">LinkedIn</a>
+        <button class="open-resume-btn footer-resume-btn">Resume</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       OFFICIAL RESUME MODAL
+       ======================================================================== -->
+  <div id="resume-modal" class="modal-backdrop">
+    <div class="editorial-resume-modal">
+      <div class="modal-top-bar">
+        <div class="modal-title-wrap">
+          <i class="fas fa-file-pdf"></i>
+          <h4>Ved Loya — Official Curriculum Vitae</h4>
+        </div>
+        <div class="modal-action-tools">
+          <button class="btn-box-outline btn-sm" id="resume-print-btn">
+            <i class="fas fa-print"></i>
+            <span>Print / PDF</span>
+          </button>
+          <button class="btn-modal-close" id="resume-close-btn" aria-label="Close modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-scroll-area">
+        <div class="resume-paper-document">
+          <div class="doc-header">
+            <h1 class="doc-name">Ved Loya</h1>
+            <p class="doc-meta">
+              Nagpur, Maharashtra | +91 9209102183 | vedloya@gmail.com | linkedin.com/in/vedloya | github.com/vedloya11
+            </p>
+          </div>
+
+          <h2 class="doc-section-heading">PROFILE SUMMARY</h2>
+          <p class="doc-paragraph">
+            Machine Learning Engineer with hands-on experience in Python, machine learning, data preprocessing, model development, and FastAPI backend development. Skilled at building end-to-end ML solutions, from data cleaning and feature engineering to model training, evaluation, and deployment through REST APIs. Strong interest in ML engineering, model deployment, and production-ready AI applications. Seeking opportunities to apply technical skills, work on real-world ML projects, and grow as a Machine Learning Engineer.
+          </p>
+
+          <h2 class="doc-section-heading">EDUCATION</h2>
+          <p class="doc-paragraph">
+            <strong>Bachelor of Engineering in Computer Engineering</strong>, Ramdeobaba University (2024–2028), 5th Semester | <strong>CGPA: 7.77</strong>
+          </p>
+
+          <h2 class="doc-section-heading">PROJECTS</h2>
+          
+          <div class="doc-project-entry">
+            <p class="doc-paragraph">
+              <strong>Software Defect Risk Engine</strong> | Python, XGBoost, SHAP, FastAPI, SQLAlchemy, Radon, AST | GitHub
+            </p>
+            <ul class="doc-bullet-list">
+              <li>Built an end-to-end ML system that scores Python source files by defect-risk probability (Low / Medium / High) and reports the top risk-driving factors, trained on the NASA KC1 benchmark (2,109 modules, ~15% defective).</li>
+              <li>Engineered features (operand and operator density) and compared Logistic Regression, Random Forest, and XGBoost; tuned XGBoost with 5-fold stratified RandomizedSearchCV and class-imbalance weighting (scale_pos_weight).</li>
+              <li>Reached 0.82 ROC-AUC and 84% recall on a held-out test set (317 samples), prioritizing recall so that most defect-prone modules are flagged for review.</li>
+              <li>Integrated SHAP explainability to show which metrics (e.g., cyclomatic complexity, branch count) raise or lower each file's risk score.</li>
+              <li>Developed a static analysis pipeline using Python's ast module and Radon to extract LOC, cyclomatic complexity, and Halstead metrics from uploaded code and feed them into the model.</li>
+              <li>Built a FastAPI backend with Pydantic validation and endpoints for code and file analysis plus scan-history CRUD (SQLAlchemy ORM, PostgreSQL-compatible), and a web dashboard for uploading code and viewing results.</li>
+            </ul>
+          </div>
+
+          <div class="doc-project-entry" style="margin-top: 1.2rem;">
+            <p class="doc-paragraph">
+              <strong>Used Car Price Predictor with Recommender</strong> | Python, XGBoost, scikit-learn, FastAPI, Pandas | GitHub
+            </p>
+            <ul class="doc-bullet-list">
+              <li>Built a regression model on 2,059 Indian used-car listings (20 features) that predicts a fair market price and recommends the 5 real listings closest to that price.</li>
+              <li>Cleaned and prepared data: median and mode imputation, regex extraction of numeric values from text fields (Engine, Max Power, Max Torque), and missing-value analysis with heatmaps.</li>
+              <li>Engineered features including Car Age and model-popularity frequency encoding, with one-hot encoding for 8 categorical variables.</li>
+              <li>Trained an XGBoost Regressor with an 80/20 split, achieving R² of 0.89 (MAE Rs. 2.66 lakh).</li>
+              <li>Added a K-Nearest Neighbors recommender over the price distribution to surface comparable listings.</li>
+              <li>Deployed the model as a FastAPI service with a /predict endpoint, Pydantic input validation, and an HTML/CSS/JavaScript frontend, with serialized model artifacts loaded via joblib.</li>
+            </ul>
+          </div>
+
+          <h2 class="doc-section-heading">POSITIONS OF RESPONSIBILITY</h2>
+          <ul class="doc-bullet-list">
+            <li><strong>Treasurer</strong>, ACM RBU Student Chapter</li>
+            <li><strong>Joint Venue Manager</strong>, Compusys Student Body</li>
+          </ul>
+
+          <h2 class="doc-section-heading">TECHNICAL SKILLS</h2>
+          <ul class="doc-bullet-list">
+            <li><strong>Languages:</strong> Python, Java, SQL</li>
+            <li><strong>Machine Learning:</strong> Scikit-learn, XGBoost, LightGBM, SHAP, feature engineering, hyperparameter tuning, model evaluation</li>
+            <li><strong>Data:</strong> Pandas, NumPy, Matplotlib, Seaborn</li>
+            <li><strong>Backend:</strong> FastAPI, REST APIs, Pydantic, SQLAlchemy, PostgreSQL, Oracle, MySQL</li>
+            <li><strong>Tools:</strong> Git, GitHub, VS Code, Google Colab, Jupyter, Pytest, AST, Radon</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
